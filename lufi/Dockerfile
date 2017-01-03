@@ -12,7 +12,7 @@ ENV GID=991 \
 
 LABEL description="lufi based on alpine" \
       tags="latest" \
-      build_ver="2016122801"
+      build_ver="2017010301"
 
 RUN BUILD_DEPS="build-base \
                 openssl-dev \
@@ -32,7 +32,7 @@ RUN BUILD_DEPS="build-base \
                 su-exec \
     && echo | cpan \
     && cpan install Carton \
-    && git clone https://git.framasoft.org/luc/lufi.git /usr/lufi \
+    && git clone https://github.com/ContribuLibre/lufi.git /usr/lufi \
     && cd /usr/lufi \
     && rm -rf cpanfile.snapshot \
     && carton install \
